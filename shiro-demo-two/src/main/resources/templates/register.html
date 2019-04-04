@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>我的注册</title>
+</head>
+<body>
+<form action="registerUser" method="post" >
+    <hr style="color: red;size: A3">
+    <input type="text" name="username">请输入用户名</input></br>
+    <input type="password" name="password">请输入密码</input></br>
+    <input type="password" name="rePassword">请再次输入密码</input></br>
+    <input type="submit" value="注册"></input></br>
+    <div th:text="${message}"></div>
+</form>
+</body>
+</html>

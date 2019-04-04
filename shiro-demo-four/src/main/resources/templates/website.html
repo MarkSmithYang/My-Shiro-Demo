@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:shiro="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>网站主页</title>
+</head>
+<body>
+<h1 style="color: red">欢迎来到牛牛卡通的游戏主页</h1>
+<hr>
+<table>
+    <tr>
+        <td>欢迎您:</td>
+        <td>
+            <shiro:principal property="username"/>
+        </td>
+    </tr>
+    <tr>
+        <td><a shiro:hasRole="admin" href="https://www.baidu.com">百度</a></td>
+    </tr>
+    <tr>
+        <td><a shiro:hasPermission="all" href="https://github.com/">GitHub</a></td>
+    </tr>
+    <tr>
+        <td>
+            <shiro:authenticated name="true">
+                <a href="https://www.iqiyi.com/">爱奇艺</a>
+            </shiro:authenticated>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="/noAuth">点我呀</a>
+            <!--<a shiro:hasPermission="all" href="/noAuth">点我呀</a>-->
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>
+

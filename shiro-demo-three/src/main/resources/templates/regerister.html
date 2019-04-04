@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>我的用户注册页面</title>
+</head>
+<body>
+
+<hr style="color:lawngreen">
+<h3 th:text="${msg}" style="color: red"></h3>
+
+<h1 style="color: red">注册页面</h1>
+    <hr style="color: blue">
+    <form style="color: chartreuse" method="post" action="regerister">
+        <table>
+            <tr style="align-content: center">
+                <td style="color: red"><label>用户名:</label></td>
+                <td><input type="text" name="username" ></td>
+            </tr>
+            <tr style="align-content: center">
+                <td style="color: red">密码:</td>
+                <td><input type="password" name="password" ></td>
+            </tr>
+            <tr>
+                <td style="color: red">验证码:</td>
+                <td><input type="text" name="checkCode" ></td>
+                <td><input disabled="disabled" type="image"  src="../static/a.png"></td>
+            </tr>
+            <tr>
+                <td><input style="color: red" type="submit" value="注册"></td>
+            </tr>
+        </table>
+    </form>
+
+
+
+</body>
+</html>
